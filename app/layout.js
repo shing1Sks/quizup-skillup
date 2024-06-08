@@ -6,9 +6,8 @@ import { useState, useEffect } from "react";
 const inter = Inter({ subsets: ["latin"] });
 import { getUser } from "@/tools/getUser";
 import { DifficultyProvider } from "@/Context/DifficultyContext";
-import { Analytics } from '@vercel/analytics/react';
-
-export default function RootLayout({ children }) {
+import { Analytics } from "@vercel/analytics/react";
+function RootLayout({ children }) {
   const [theme, setTheme] = useState("light");
   useEffect(() => {
     const fetchUser = async () => {
@@ -39,3 +38,5 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+RootLayout.displayName = "RootLayout";
+export default RootLayout;

@@ -6,7 +6,7 @@ function Intro() {
       <p className="text-3xl font-normal mb-2">Get Started Now!</p>
       <p>
         Dive into the world of Quizup-Skillup and start your journey today.
-        Whether you're looking to learn something new, test your knowledge, or
+        Whether you&apos;re looking to learn something new, test your knowledge, or
         simply have fun, Quizup-Skillup is the perfect companion. Login or create an account, choose your categories, and let the adventure begin!
       </p>
     </div>
