@@ -2,7 +2,7 @@
 import { DifficultyContext } from "@/Context/DifficultyContext";
 import Category from "@/components/Category";
 import { getQuizes } from "@/tools/getQuizes";
-import React, { useState, useEffect ,useContext} from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { ColorRing } from "react-loader-spinner";
 
 const page = React.memo(({ params }) => {
@@ -20,7 +20,7 @@ const page = React.memo(({ params }) => {
       return;
     }
     lastCallTime = Date.now();
-    setQuiz(await getQuizes(id,difficulty));
+    setQuiz(await getQuizes(id, difficulty));
   };
   useEffect(() => {
     now = Date.now();
@@ -66,5 +66,5 @@ const page = React.memo(({ params }) => {
     </div>
   );
 });
-
+page.displayName = "Category Page";
 export default page;
