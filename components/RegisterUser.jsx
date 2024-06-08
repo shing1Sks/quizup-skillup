@@ -66,6 +66,15 @@ const RegisterForm = () => {
             withCredentials: true,
           }
         );
+        const currentDate = new Date();
+        const nextDay = new Date(currentDate);
+        nextDay.setDate(currentDate.getDate() + 1);
+        document.cookie = `accessToken=${
+          response.data.data.accessToken
+        };expires=${nextDay.toUTCString()};`;
+        document.cookie = `refreshToken=${
+          response.data.data.refreshToken
+        };expires=${nextDay.toUTCString()};`;
         setLoader(false);
         location.reload();
       } catch (error) {
