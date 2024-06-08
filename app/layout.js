@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 const inter = Inter({ subsets: ["latin"] });
 import { getUser } from "@/tools/getUser";
 import { DifficultyProvider } from "@/Context/DifficultyContext";
+DifficultyProvider.displayName = "Difficulty Provider";
 import { Analytics } from "@vercel/analytics/react";
 function RootLayout({ children }) {
   const [theme, setTheme] = useState("light");
