@@ -66,5 +66,5 @@ const page = React.memo(({ params }) => {
     </div>
   );
 });
-page.displayName = "Category Page";
+page.displayName = "CategoryPage";
 export default page;
