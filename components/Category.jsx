@@ -167,7 +167,7 @@ function Category({ quiz, next, setNext }) {
             result
           )}
         </div>
-        <div
+        {/* <div
           className="sm:w-[400px] border-2 rounded-lg border-pink-900 bg-pink-300
       h-[400px] flex flex-col items-center justify-center dark:text-pink-900 dark:bg-purple-300"
         >
@@ -215,7 +215,7 @@ function Category({ quiz, next, setNext }) {
               ""
             )}
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );
