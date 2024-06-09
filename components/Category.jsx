@@ -101,7 +101,7 @@ function Category({ quiz, next, setNext }) {
 
   return (
     <>
-      <div className="w-full flex sm:flex-row gap-x-10 flex-col items-center justify-center dark:bg-[#4f1127] bg-[#FB2E7B] h-fit pb-[100px] p-10">
+      <div className="w-full flex sm:flex-row gap-x-10 gap-y-5 sm:gap-y-0 flex-col items-center justify-center dark:bg-[#4f1127] bg-[#FB2E7B] h-fit pb-[100px] p-10">
         <div
           className="sm:w-[400px] border-2 rounded-lg sm:px-5 px-2 pt-16 pb-10 border-pink-900 bg-pink-300
       h-[400px] relative dark:text-pink-900 dark:bg-purple-300"
