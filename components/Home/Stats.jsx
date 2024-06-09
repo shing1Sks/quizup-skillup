@@ -27,9 +27,9 @@ function Stats({ user }) {
   return (
     <div className="w-full flex flex-row items-center justify-center p-8 bg-blue-200 dark:bg-green-600 text-blue-800 dark:text-white font-semibold h-fit">
       {user ? (
-        <div className="flex sm:flex-row flex-col w-full items-center justify-around text-center text-lg gap-x-[40px] gap-y-3 sm:gap-y-1">
-          <div className="text-sm">
-            <p className="text-center text-lg">Difficulty</p>
+        <div className="flex flex-row w-full items-center justify-around text-center text-lg gap-x-[40px] sm:gap-x-1">
+          <div className="sm:text-lg flex items-center justify-center flex-col">
+            <p className="text-center sm:text-xl font-bold">Difficulty</p>
             <div>
               <div className="flex items-center space-x-2">
                 <input
@@ -73,34 +73,36 @@ function Stats({ user }) {
               </div>
             </div>
           </div>
-          <p>SCORE:{user?.data?.user.score}</p>
-          <p>RANK:{tags?.rankS}</p>
-          {
-            <ScrollArea className="h-[100px] w-[200px] sm:w-[280px] rounded-md border">
-            <div className="p-4">
-              <h4 className="mb-4 leading-none text-center">
-                Leaderboard !
-              </h4>
-              {tags?.leaderboard.map((tag, index) => (
-                <div
-                  key={tag.rank}
-                  className={`text-sm
+          <div className="flex flex-col gap-y-2 text-base border-2 border-blue-300 sm:p-2 rounded-md sm:gap-y-0 sm:flex-row gap-x-10 items-center justify-center">
+            <p className="">SCORE:{user?.data?.user.score}</p>
+            <p>RANK:{tags?.rankS}</p>
+            {
+              <ScrollArea className="h-[100px] w-[200px] sm:w-[280px] rounded-md border">
+                <div className="p-4">
+                  <h4 className="mb-4 leading-none text-center">
+                    Leaderboard !
+                  </h4>
+                  {tags?.leaderboard.map((tag, index) => (
+                    <div
+                      key={tag.rank}
+                      className={`text-sm
                 overflow-x-auto h-[26px] ${
                   tag?.username == tags?.rank.username
                     ? "bg-gray-300 dark:bg-gray-700"
                     : ""
                 }`}
-                >
-                  <span
-                    className=" text-justify"
-                    key={index}
-                  >{`Rank ${tag?.rank} ${tag?.username} Score ${tag?.score}`}</span>
-                  <Separator className="my-2" />
+                    >
+                      <span
+                        className=" text-justify"
+                        key={index}
+                      >{`Rank ${tag?.rank} ${tag?.username} Score ${tag?.score}`}</span>
+                      <Separator className="my-2" />
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
-          </ScrollArea>
-          }
+              </ScrollArea>
+            }
+          </div>
         </div>
       ) : (
         <div className="text-xl">

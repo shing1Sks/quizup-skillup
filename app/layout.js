@@ -9,7 +9,7 @@ import { DifficultyProvider } from "@/Context/DifficultyContext";
 DifficultyProvider.displayName = "Difficulty Provider";
 import { Analytics } from "@vercel/analytics/react";
 function RootLayout({ children }) {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("dark");
   useEffect(() => {
     const fetchUser = async () => {
       try {
