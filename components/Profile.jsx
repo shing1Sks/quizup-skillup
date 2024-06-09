@@ -26,7 +26,7 @@ function Profile({ user }) {
   });
   const handleGetL = async () => {
     const res = await getRank();
-    if(res){
+    if (res) {
       setTags(res);
     }
   };
@@ -37,7 +37,11 @@ function Profile({ user }) {
     <Sheet>
       <SheetTrigger>
         <div className="border-2 border-gray-600 dark:border-gray-200 text-gray-200 font-medium bg-blue-400 dark:bg-gray-800 rounded-md p-2">
-          <img className="rounded-full w-[20px]" src={avatar} alt="Profile" />
+          {avatar ? (
+            <img className="rounded-full w-[20px]" src={avatar} alt="Profile" />
+          ) : (
+            <p>👤</p>
+          )}
         </div>
       </SheetTrigger>
       <SheetContent>
@@ -73,7 +77,7 @@ function Profile({ user }) {
                   <span>username: {username}</span>
                   <span>score: {score}</span>
                   <span>RANK:{tags?.rankS}</span>
-                </div> 
+                </div>
                 {Array.isArray(tags.leaderboard) && (
                   <ScrollArea className="h-[100px] w-[220px] sm:w-[280px] ml-6 rounded-md border mt-4 ">
                     <div className="pt-4">
