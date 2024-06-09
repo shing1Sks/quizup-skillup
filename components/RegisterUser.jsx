@@ -23,7 +23,7 @@ const RegisterForm = () => {
         formData.append("password", password);
         formData.append("project", "skillup-quizup");
         formData.append("avatar", avatar);
-        console.log(username,avatar,fullname,password)
+        console.log(username, avatar, fullname, password);
         if (username == "" || fullname == "" || password == "") {
           alert("username fullname password required !!");
           setLoader(false);
@@ -174,6 +174,18 @@ const RegisterForm = () => {
               </button>
             </form>
           )
+        ) : loader ? (
+          <div className="w-full flex items-center justify-center">
+            <ColorRing
+              visible={true}
+              height="80"
+              width="80"
+              ariaLabel="color-ring-loading"
+              wrapperStyle={{}}
+              wrapperClass="color-ring-wrapper"
+              colors={["#e15b64", "#f47e60", "#f8b26a", "#abbd81", "#849b87"]}
+            />
+          </div>
         ) : (
           <form onSubmit={handleSubmit} className="flex flex-col">
             <label htmlFor="username">Username:</label>
