@@ -11,10 +11,13 @@ function Logout({ setLogout }) {
           withCredentials: true,
         }
       );
+      // console.log(response)
       setLogout(false);
       location.reload();
     } catch (error) {
       console.log(error);
+      setLogout(false);
+      location.reload();
     }
   };
   return (
