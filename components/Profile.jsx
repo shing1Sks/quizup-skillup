@@ -84,7 +84,7 @@ function Profile({ user }) {
                         <div
                           key={tag.rank}
                           className={`text-sm
-                        overflow-x-auto h-[26px] ${
+                        overflow-x-auto text-center h-[26px] ${
                           tag?.username == tags?.rank.username
                             ? "bg-gray-300 dark:bg-gray-700"
                             : ""
