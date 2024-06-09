@@ -26,7 +26,9 @@ function Profile({ user }) {
   });
   const handleGetL = async () => {
     const res = await getRank();
-    setTags(res);
+    if(res){
+      setTags(res);
+    }
   };
   useEffect(() => {
     handleGetL();
@@ -75,9 +77,9 @@ function Profile({ user }) {
                 {Array.isArray(tags.leaderboard) && (
                   <ScrollArea className="h-[100px] w-[200px] sm:w-[280px] rounded-md border">
                     <div className="p-4">
-                      <h4 className="mb-4 leading-none text-center">
+                      <span className="mb-4 leading-none text-center">
                         Leaderboard !
-                      </h4>
+                      </span>
                       {tags?.leaderboard.map((tag, index) => (
                         <div
                           key={tag.rank}

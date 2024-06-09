@@ -76,28 +76,30 @@ function Stats({ user }) {
           <p>SCORE:{user?.data?.user.score}</p>
           <p>RANK:{tags?.rankS}</p>
           {
-            <ScrollArea className="h-[140px] w-[300px] rounded-md border">
-              <div className="p-4">
-                <h4 className="mb-4 leading-none text-center">Leaderboard !</h4>
-                {tags?.leaderboard.map((tag, index) => (
-                  <div
+            <ScrollArea className="h-[100px] w-[200px] sm:w-[280px] rounded-md border">
+            <div className="p-4">
+              <h4 className="mb-4 leading-none text-center">
+                Leaderboard !
+              </h4>
+              {tags?.leaderboard.map((tag, index) => (
+                <div
+                  key={tag.rank}
+                  className={`text-sm
+                overflow-x-auto h-[26px] ${
+                  tag?.username == tags?.rank.username
+                    ? "bg-gray-300 dark:bg-gray-700"
+                    : ""
+                }`}
+                >
+                  <span
+                    className=" text-justify"
                     key={index}
-                    className={`text-sm
-                        overflow-x-auto h-[26px] ${
-                          tag?.username == tags?.rank.username
-                            ? "bg-gray-300 dark:bg-gray-700"
-                            : ""
-                        }`}
-                  >
-                    <p
-                      className="text-center text-sm"
-                      key={index}
-                    >{`Rank ${tag?.rank} ${tag?.username} Score ${tag?.score}`}</p>
-                    <Separator className="my-2" />
-                  </div>
-                ))}
-              </div>
-            </ScrollArea>
+                  >{`Rank ${tag?.rank} ${tag?.username} Score ${tag?.score}`}</span>
+                  <Separator className="my-2" />
+                </div>
+              ))}
+            </div>
+          </ScrollArea>
           }
         </div>
       ) : (
