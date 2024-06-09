@@ -75,7 +75,7 @@ function Profile({ user }) {
                   <span>RANK:{tags?.rankS}</span>
                 </div> 
                 {Array.isArray(tags.leaderboard) && (
-                  <ScrollArea className="h-[100px] w-[200px] sm:w-[280px] ml-6 rounded-md border mt-4 ">
+                  <ScrollArea className="h-[100px] w-[210px] sm:w-[280px] ml-6 rounded-md border mt-4 ">
                     <div className="pt-4">
                       <h4 className="mb-4 leading-none text-center">
                         Leaderboard !
