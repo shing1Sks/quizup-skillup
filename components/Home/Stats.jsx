@@ -92,7 +92,7 @@ function Stats({ user }) {
                     <p
                       className="text-center"
                       key={index}
-                    >{`Rank ${tag?.rank} ${tag?.username}adsdasdad Score ${tag?.score}`}</p>
+                    >{`Rank ${tag?.rank} ${tag?.username} Score ${tag?.score}`}</p>
                     <Separator className="my-2" />
                   </div>
                 ))}
