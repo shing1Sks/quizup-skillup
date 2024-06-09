@@ -23,6 +23,7 @@ const RegisterForm = () => {
         formData.append("password", password);
         formData.append("project", "skillup-quizup");
         formData.append("avatar", avatar);
+        console.log(username,avatar,fullname,password)
         if (username == "" || fullname == "" || password == "") {
           alert("username fullname password required !!");
           setLoader(false);
