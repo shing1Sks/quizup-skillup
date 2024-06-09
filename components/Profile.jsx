@@ -64,7 +64,7 @@ function Profile({ user }) {
               </div>
             ) : (
               <div>
-                <div className="flex flex-col items-center justify-center gap-y-5 text-xl">
+                <div className="flex flex-col ml-4 items-center w-full justify-center text-center gap-y-5 text-xl">
                   <img
                     src={avatar}
                     alt="profile pic"
@@ -73,13 +73,13 @@ function Profile({ user }) {
                   <span>username: {username}</span>
                   <span>score: {score}</span>
                   <span>RANK:{tags?.rankS}</span>
-                </div>
+                </div> 
                 {Array.isArray(tags.leaderboard) && (
-                  <ScrollArea className="h-[100px] w-[200px] sm:w-[280px] rounded-md border">
-                    <div className="p-4">
-                      <span className="mb-4 leading-none text-center">
+                  <ScrollArea className="h-[100px] w-[200px] sm:w-[280px] ml-6 rounded-md border mt-4 ">
+                    <div className="pt-4">
+                      <h4 className="mb-4 leading-none text-center">
                         Leaderboard !
-                      </span>
+                      </h4>
                       {tags?.leaderboard.map((tag, index) => (
                         <div
                           key={tag.rank}
