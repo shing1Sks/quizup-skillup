@@ -46,7 +46,7 @@ const page = React.memo(({ params }) => {
     );
   }, [next]);
   return (
-    <div className="flex items-center justify-center w-full bg-[#FB2E7B]">
+    <div className="flex items-center justify-center min-h-screen w-full bg-[#FB2E7B]">
       {quizE ? (
         quizE
       ) : (
