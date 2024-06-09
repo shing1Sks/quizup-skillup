@@ -76,7 +76,7 @@ function Stats({ user }) {
           <p>SCORE:{user?.data?.user.score}</p>
           <p>RANK:{tags?.rankS}</p>
           {
-            <ScrollArea className="h-[100px] w-[300px] rounded-md border">
+            <ScrollArea className="h-[140px] w-[300px] rounded-md border">
               <div className="p-4">
                 <h4 className="mb-4 leading-none text-center">Leaderboard !</h4>
                 {tags?.leaderboard.map((tag, index) => (
@@ -90,7 +90,7 @@ function Stats({ user }) {
                         }`}
                   >
                     <p
-                      className="text-center"
+                      className="text-center text-sm"
                       key={index}
                     >{`Rank ${tag?.rank} ${tag?.username} Score ${tag?.score}`}</p>
                     <Separator className="my-2" />
