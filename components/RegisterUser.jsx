@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { ColorRing } from "react-loader-spinner";
-import { X } from "lucide-react";
 
 const RegisterForm = () => {
   const [username, setUsername] = useState("");
